@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#calculator{
+    width: 24%;
+    display: grid;
+    margin: 50px auto;
+    grid-gap: 10px;
+    grid-template-rows: 100px repeat(5,1fr);
+    grid-template-columns: 250px 100px;
+    background-color: rgb(151, 225, 151);
+    border: 2px solid green;
+    border-radius: 10px;
+}
+#display{
+    background-color: aqua;
+    border-radius: 10px;
+    grid-column: 1/-1;
+    position: relative;
+}
+
+.show{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 10px;
+    width: 340px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+#display-content{
+    position: absolute;
+}
+#display-content::-webkit-scrollbar {
+    display: none;
+  }
+
+#display-result{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.7rem !important;
+}
+#display-result::-webkit-scrollbar {
+    display: none;
+  }
+/**************** GENERAL BUTTON CLASS *************/
+.btn{
+    height: 80px;
+    width: 80px;
+    background-color: rgba(172, 102, 238, 0.925);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 3px;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px 1px red;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+/**************** GENERAL FLEX CLASS *************/
+.flex-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#horOperator{
+    grid-column: 1/2;
+}
+#numeric1{
+    grid-column: 1/2;
+}
+#numeric2{
+    grid-column: 1/2;
+}
+#numeric3{
+    grid-column: 1/2;
+}
+#numeric4{
+    grid-column: 1/2;
+}
+#vrtOperator{
+    grid-column: 2/3;
+    grid-row: 2/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
